@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
+import { SectionHeading } from "./SectionHeading";
 
 const achievements = [
   { value: 25, suffix: "", label: "Years Experience", image: "/assets/pure-ayurveda/achieve-icon1.png" },
