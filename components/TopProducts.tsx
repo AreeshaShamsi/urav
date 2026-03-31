@@ -107,6 +107,7 @@ export function TopProducts() {
         <div className="row">
           <div className="col-12 text-center my-10">
             <SectionHeading
+              kicker="Best For You"
               title="Our Top Products"
               className="text-green-800"
             />
