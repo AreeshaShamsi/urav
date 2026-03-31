@@ -135,7 +135,7 @@ export default function Navbar() {
           <div className="hidden md:flex lg:hidden items-center justify-between h-[48px]">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0 -ml-4 px-3 py-1 rounded-[14px]">
-              <Image src="/assets/pure-ayurveda/logo.png" alt="Urav Ayurveda" width={100} height={60} className="object-contain" />
+              <Image src="/assets/pure-ayurveda/Logo.png" alt="Urav Ayurveda" width={100} height={60} className="object-contain" />
             </Link>
 
             {/* Condensed nav */}
@@ -192,7 +192,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center justify-between h-[46px]">
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0 -ml-3 px-3 py-1 rounded-[12px]">
-              <Image src="/assets/pure-ayurveda/logo.png" alt="Urav Ayurveda" width={90} height={54} className="object-contain" />
+              <Image src="/assets/pure-ayurveda/Logo.png" alt="Urav Ayurveda" width={90} height={54} className="object-contain" />
             </Link>
 
             {/* Mobile icons + hamburger */}
