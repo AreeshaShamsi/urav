@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1 pb-4 border-b border-white/10 lg:border-b-0 lg:pb-0">
             <div className="mb-3">
               <Image
-                src="/logo.png"
+                src="assets/pure-ayurveda/Logo.png"
                 alt="Urav Ayurveda"
                 width={90}
                 height={44}
