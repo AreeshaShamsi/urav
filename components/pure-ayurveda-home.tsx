@@ -6,9 +6,9 @@ import Image from "next/image";
 import Navbar from "./ui/Navbar";
 import { CareSlider } from "./CareSlider";
 import { TopProducts } from "./TopProducts";
-import {AchievementsSection} from "./AchievementsSection";
+import { AchievementsSection } from "./AchievementsSection";
 import { TrendingProducts } from "./TrendingProducts";
-import {WhySection}  from "./WhySection";
+import { WhySection } from "./WhySection";
 import { TestimonialsSection } from "./Testimonials";
 import { BlogSection } from "./Blog";
 import Footer from "./ui/Footer";
@@ -66,9 +66,9 @@ export function PureAyurvedaHome() {
             {/* Centered text */}
             <div className="text-center mb-10">
               <h1 className="hero-title text-white font-bold leading-tight mb-5">
-  <span className="block text-5xl lg:text-6xl">We Are Here To Give You The Best</span>
-  <span className="block text-5xl lg:text-6xl text-[#8dc63f]">Herb Products</span>
-</h1>
+                <span className="block text-5xl lg:text-6xl">We Are Here To Give You The Best</span>
+                <span className="block text-5xl lg:text-6xl text-[#8dc63f]">Herb Products</span>
+              </h1>
 
               <p className="hero-sub text-white/70 text-sm lg:text-base max-w-xl mx-auto mb-8 leading-relaxed">
                 We bring you authentic Ayurvedic products crafted with
@@ -81,8 +81,8 @@ export function PureAyurvedaHome() {
               </button>
             </div>
 
-            {/* Product Image */}
-            <div className="hero-img relative w-full max-w-2xl h-[440px] -mt-20">
+            {/* Product Image — bigger on small screens */}
+            <div className="hero-img relative w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[440px] mt-0 sm:-mt-10 lg:-mt-20">
               <Image
                 src="/assets/pure-ayurveda/products.png"
                 alt="Product group"
