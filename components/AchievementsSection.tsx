@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { SectionHeading } from "./SectionHeading";
 
 const achievements = [
-  { value: 25, suffix: "", label: "Years Experience", image: "/assets/pure-ayurveda/achieve-icon1.png" },
-  { value: 60, suffix: "", label: "Happy Customers", image: "/assets/pure-ayurveda/achieve-icon2.png" },
-  { value: 800, suffix: "", label: "Our Products", image: "/assets/pure-ayurveda/achieve-icon3.png" },
-  { value: 100, suffix: "%", label: "Product Purity", image: "/assets/pure-ayurveda/achieve-icon4.png", className: "percent" },
+  { value: 25,  suffix: "",  label: "Years Experience", image: "/assets/pure-ayurveda/achieve-icon1.png" },
+  { value: 60,  suffix: "",  label: "Happy Customers",  image: "/assets/pure-ayurveda/achieve-icon2.png" },
+  { value: 800, suffix: "",  label: "Our Products",     image: "/assets/pure-ayurveda/achieve-icon3.png" },
+  { value: 100, suffix: "%", label: "Product Purity",   image: "/assets/pure-ayurveda/achieve-icon4.png", className: "percent" },
 ];
 
 function CountUp({
@@ -83,7 +83,7 @@ export function AchievementsSection() {
                   <div className="ayur-achieve-text">
                     <CountUp
                       value={item.value}
-                      suffix={item.suffix}   {/* ✅ FIXED */}
+                      suffix={item.suffix}
                       className={item.className}
                       dataTo={item.className === "percent" ? `${item.value}%` : `${item.value}`}
                     />
