@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle, X, Play } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const whyItems = [
@@ -11,11 +10,11 @@ const whyItems = [
   { title: "Health Care", text: "Duis aute irure dolor in reprehenderit in voluptate velit", image: "/assets/pure-ayurveda/why-icon4.png" },
 ];
 
-export function WhySection() {
+export function WhySection({ className = "" }: { className?: string }) {
   const [videoOpen, setVideoOpen] = useState(false);
 
   return (
-    <section className="ayur-bgcover ayur-why-sec">
+    <section className={`ayur-bgcover ayur-why-sec ${className}`.trim()}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12">
@@ -42,24 +41,27 @@ export function WhySection() {
             <div className="ayur-why-textheading">
               <h3>Solve Your Problem with The Power of Nature</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,it's sed do eiusmod tempor
+                incididunt ut labore et dolore was a magna aliqua.Ut enim ad minim veniam,quis
+                nostrud exercitation that is ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in to reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur.
               </p>
               <ul>
                 {Array.from({ length: 4 }).map((_, index) => (
                   <li key={index}>
-                    <CheckCircle size={18} />
+                    <img src="/assets/pure-ayurveda/tick.png" alt="icon" />
                     <p>Quis nostrud was exercitation.</p>
                   </li>
                 ))}
               </ul>
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore eu fugiat nulla pariatur.
               </p>
               <div className="ayur-why-btn">
-                <a href="#" className="ayur-btn">
+                <a href="/services" className="ayur-btn">
                   Read More
                 </a>
               </div>
@@ -77,7 +79,7 @@ export function WhySection() {
                   onClick={() => setVideoOpen(true)}
                   aria-label="Open video"
                 >
-                  <Play size={28} fill="currentColor" />
+                  <img src="/assets/pure-ayurveda/play-icon.svg" alt="play" />
                 </button>
               </div>
             </div>
@@ -86,19 +88,28 @@ export function WhySection() {
       </div>
 
       {videoOpen && (
-        <div className="ayur-popup" onClick={() => setVideoOpen(false)}>
+        <div
+          id="videoPopup1"
+          className="ayur-popup"
+          onClick={() => setVideoOpen(false)}
+        >
           <div className="ayur-popup-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
+            <span
               className="close"
               onClick={() => setVideoOpen(false)}
+              role="button"
               aria-label="Close video"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") setVideoOpen(false);
+              }}
             >
-              <X size={20} />
-            </button>
+              ×
+            </span>
             <iframe
               src="/assets/pure-ayurveda/hJTmi9euoNg.html"
               title="Pure Ayurveda video"
+              frameBorder={0}
               allowFullScreen
             />
           </div>

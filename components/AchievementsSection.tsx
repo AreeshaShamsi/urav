@@ -5,12 +5,22 @@ import { SectionHeading } from "./SectionHeading";
 
 const achievements = [
   { value: 25, suffix: "", label: "Years Experience", image: "/assets/pure-ayurveda/achieve-icon1.png" },
-  { value: 60, suffix: "+", label: "Happy Customers", image: "/assets/pure-ayurveda/achieve-icon2.png" },
-  { value: 800, suffix: "+", label: "Our Products", image: "/assets/pure-ayurveda/achieve-icon3.png" },
-  { value: 100, suffix: "%", label: "Product Purity", image: "/assets/pure-ayurveda/achieve-icon4.png" },
+  { value: 60, suffix: "", label: "Happy Customers", image: "/assets/pure-ayurveda/achieve-icon2.png" },
+  { value: 800, suffix: "", label: "Our Products", image: "/assets/pure-ayurveda/achieve-icon3.png" },
+  { value: 100, suffix: "", label: "Product Purity", image: "/assets/pure-ayurveda/achieve-icon4.png", className: "percent" },
 ];
 
-function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
+function CountUp({
+  value,
+  suffix = "",
+  className = "",
+  dataTo,
+}: {
+  value: number;
+  suffix?: string;
+  className?: string;
+  dataTo?: string;
+}) {
   const ref = useRef<HTMLHeadingElement | null>(null);
   const [displayValue, setDisplayValue] = useState(0);
 
@@ -44,7 +54,7 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
   }, [value]);
 
   return (
-    <h2 className="ayur-counting" ref={ref}>
+    <h2 className={`ayur-counting ${className}`.trim()} ref={ref} data-to={dataTo}>
       {displayValue}
       {displayValue > 0 ? suffix : ""}
     </h2>
@@ -71,7 +81,12 @@ export function AchievementsSection() {
                     <img src={item.image} alt={item.label} />
                   </div>
                   <div className="ayur-achieve-text">
-                    <CountUp value={item.value} suffix={item.suffix} />
+                    <CountUp
+                      value={item.value}
+                      suffix={item.suffixText ?? item.suffix}
+                      className={item.className}
+                      dataTo={item.className === "percent" ? `${item.value}%` : `${item.value}`}
+                    />
                     <p>{item.label}</p>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ body, html{
   overflow-x: hidden;
 }
 :root {
-  --ayur-primary-color:#166534;
+  --ayur-primary-color:#7CB342;
   --ayur-white-color: #ffffff;
   --ayur-primary-light:#D6CDCA;
   --ayur-banheading-color: #222222;
@@ -745,7 +745,7 @@ li.ayur-has-menu a svg{
   min-width: 83px;
   max-width: 100%;
   padding: 6px 0;
-  background-color: #166534;
+  background-color: #7CB342;
   border-radius: 5px;
   text-align: center;
 }
@@ -880,7 +880,7 @@ a.likeproduct img.like{
   align-items: center;
   justify-content: center;
   background-color: var(--ayur-primary-color);
-  box-shadow: 4px 4px 10.5px 0px #1665344D;
+  box-shadow: 4px 4px 10.5px 0px #7CB3424D;
   transition: all .3s linear;
 }
 .ayur-achieve-text{
@@ -978,7 +978,7 @@ a.likeproduct img.like{
   justify-content: center;
   border-radius: 100%;
   background-color: var(--ayur-primary-color);
-  box-shadow: 4px 4px 10.5px 0px #1665344D;
+  box-shadow: 4px 4px 10.5px 0px #7CB3424D;
   text-align: center;
   margin: 0 auto 10px;
   transition: all .3s linear;
@@ -2195,7 +2195,7 @@ tr.ayur-cartsubtotal td{
   content: '';
   height: 20px;
   width: 25px;
-  background-color: #166534;
+  background-color: #7CB342;
   left: 0;
   top: 0;
   border-radius: 100% 100% 0 0;

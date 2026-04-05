@@ -76,14 +76,11 @@ function ProductCard({
           </div>
         </div>
 
-        <div className="ayur-tpro-btn mt-3">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-green-800 text-white px-5 py-2 rounded-full 
-                       font-medium transition-all duration-300 
-                       hover:bg-green-700 hover:shadow-md"
-          >
-            <ShoppingCart size={16} />
+       <div className="ayur-tpro-btn">
+          <a href="#" className="ayur-btn">
+            <span>
+              <ShoppingCart size={16} />
+            </span>
             Add to Cart
           </a>
         </div>
@@ -109,7 +106,7 @@ export function TopProducts() {
             <SectionHeading
               kicker="Best For You"
               title="Our Top Products"
-              className="text-green-800"
+              className="text-[#7CB342]"
             />
           </div>
         </div>
@@ -131,20 +128,7 @@ export function TopProducts() {
           })}
         </div>
 
-        {/* CENTERED BUTTON */}
-        <div className="row">
-          <div className="col-12 flex justify-center mt-10">
-            <a
-              href="#"
-              className="bg-green-800 text-white px-7 py-3 rounded-full font-semibold 
-                         transition-all duration-300 
-                         hover:bg-green-700 hover:shadow-xl hover:-translate-y-1 
-                         active:translate-y-0"
-            >
-              Read More
-            </a>
-          </div>
-        </div>
+        
 
       </div>
 

@@ -14,7 +14,7 @@ export function AboutSection() {
                 alt="About Pure Ayurveda"
               />
               <div className="ayur-about-exp">
-                <p className="text-green-800">4+</p>
+                <p className="text-[#7CB342]">4+</p>
                 <p>Years of Experience</p>
               </div>
             </div>
